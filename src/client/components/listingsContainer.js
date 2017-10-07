@@ -8,18 +8,18 @@ export default class ListingsContainer extends React.Component {
 
   }
 
-  render() {
-    return (
-      <div className="wrapper">
-        {this.props.listings.map((listing, i) => {
-            return (
-              <ListingView listing={listing} key={listing.name} />
-            )
-          }
-        })}
-      </div>
-    );
-  };
-}
+
+    render() {
+      return (
+        <div className="wrapper">
+          {this.props.listings.map((listing, i) => {
+              return (
+                <ListingView listing={listing} key={listing.name} />
+              )
+          })}
+        </div>
+      );
+    };
+  }
 
 ListingsContainer.propTypes = {listings: PropTypes.array.isRequired};
